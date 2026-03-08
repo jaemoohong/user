@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: user-deploy
-          image: 762921032637.dkr.ecr.ap-northeast-2.amazonaws.com/user:a12d5fd
+          image: 762921032637.dkr.ecr.ap-northeast-2.amazonaws.com/user:5a49bf2
           ports:
             - containerPort: 8080
