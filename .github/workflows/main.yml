@@ -64,8 +64,6 @@ jobs:
           git add dev/deploy.yaml
           git commit -m "Update image tag to $IMAGE_TAG" || echo "No changes to commits"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           
       - name: Install Argo CD CLI
         run: |
