@@ -63,7 +63,7 @@ jobs:
           git commit -m "Update image tag to $IMAGE_TAG" || echo "No changes to commit"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           
       - name: Install Argo CD CLI
         run: |
