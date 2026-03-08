@@ -25,7 +25,7 @@ func main() {
 	http.HandleFunc("/v1/users", usersHandler)
 	http.HandleFunc("/v1/users/", userHandler)
 
-	println("server started :8080")
+	println("servers started :8080")
 	http.ListenAndServe(":8080", nil)
 }
 
