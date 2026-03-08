@@ -13,6 +13,7 @@ env:
 jobs:
   build-and-deploy:
     runs-on: arc-runner-set
+    permissions: write-all
 
     steps:
       - name: Checkout code
@@ -60,7 +61,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git add dev/deploy.yaml
           git commit -m "Update image tag to $IMAGE_TAG" || echo "No changes to commits"
           git push
