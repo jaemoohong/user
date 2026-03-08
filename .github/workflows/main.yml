@@ -76,4 +76,4 @@ jobs:
       - name: Trigger Argo CD sync
         run: |
           argocd login argo-cd-argocd-server.default --username admin --password ${{ secrets.ARGOCD_PASSWORD }} --insecure
-          argocd app sync dev-user
+          argocd app sync dev-user --insecure
