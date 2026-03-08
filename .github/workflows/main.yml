@@ -26,7 +26,7 @@ jobs:
 
       - name: Build Go binary
         run: |
-          go build -o main ./main.go
+          go build -o app ./main.go
 
       - name: Log in to AWS ECR
         uses: aws-actions/amazon-ecr-login@v2
